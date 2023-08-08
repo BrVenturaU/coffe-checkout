@@ -190,3 +190,19 @@ input.short-input {
 .item-options {
   grid-area: options;
 }
+
+/* 
+  MEDIA QUERIES
+*/
+
+@media (width <= 800px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "items"
+      "client"
+      "payment"
+      "total"
+      "actions";
+  }
+}

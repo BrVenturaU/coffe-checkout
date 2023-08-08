@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efefef;
+  font-family: "Open Sans", sans-serif;
+}
+
+.brand {
+  color: #fbf2c0;
+  background-color: #43281c;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+
+.brand img {
+  width: 24px;
+  height: 24px;
+}
+
+.card {
+  background-color: #eee1d5;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  padding: 1.5rem 1rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  color: #955a2d;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+main {
+  padding: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  grid-template-areas:
+    "items client"
+    "items payment"
+    "total total"
+    "actions actions";
+}
+
+.item {
+  padding: 1rem 0;
+  border-bottom: 2px solid #ddb892;
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  row-gap: 0.5rem;
+  grid-template-areas:
+    "quantity name item-price"
+    "quantity options item-price";
+}
+
+.item:last-child {
+  padding-top: 1rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.item-price {
+  font-weight: bold;
+}
+
+.item-options {
+  list-style: none;
+  color: #b08968;
+}
+
+.input-group {
+  position: relative;
+  margin: 1.5rem 0 0 0;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #885a2d;
+  background-color: #eee1d5;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid #43281c;
+}
+
+.input-group label {
+  color: #885a2d;
+  font-size: 0.75rem;
+  background-color: #eee1d5;
+  position: absolute;
+  left: 1.5rem;
+  top: -0.4rem;
+}
+
+input.short-input {
+  width: 50%;
+}
+
+.total {
+  margin-top: 2rem;
+  justify-self: center;
+  width: 30%;
+}
+
+.total-info {
+  list-style: none;
+}
+
+.total-info li {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-info li:last-child {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.btn-save {
+  width: 100%;
+  height: 40px;
+  background-color: #deb993;
+  border-radius: 20px;
+  border: 2px solid #885a2d;
+  font-size: 1rem;
+  color: #43281c;
+  transition: color 0.2s linear, background-color 0.2s linear;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #885a2d;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #deb993;
+}
+
+/* GRID AREAS*/
+
+.items {
+  grid-area: items;
+}
+.client-info {
+  grid-area: client;
+}
+
+.payment-data {
+  grid-area: payment;
+}
+
+.total {
+  grid-area: total;
+}
+
+.actions {
+  grid-area: actions;
+}
+
+.item-quantity {
+  grid-area: quantity;
+}
+
+.item-name {
+  grid-area: name;
+}
+
+.item-price {
+  grid-area: item-price;
+}
+
+.item-options {
+  grid-area: options;
+}
